@@ -6,6 +6,7 @@ const Cart = () => {
 
   return (
     <section className="mb-20">
+      <div className="py-7"></div>
       <div className="container mx-auto grid grid-cols-12 gap-x-6">
         {!isEmpty ? (
           <div className="col-span-8">
@@ -54,7 +55,7 @@ const Cart = () => {
               <h2 className="text-white uppercase font-semibold bg-zinc-900 my-8 py-5 px-6">Your Cart: {totalItems}</h2>
             </header>
             <section className="flex flex-col gap-y-6">
-              <p>Cart is Empty.</p>
+              <p className="text-center py-20 text-xl">Cart is Empty.</p>
             </section>
           </div>
         )}
@@ -65,7 +66,7 @@ const Cart = () => {
               Items: <span className="font-normal">{totalItems}</span>
             </p>
             <p className="font-semibold">
-              Total Price: <span className="font-normal">${cartTotal}</span>
+              Total Price: <span className="font-normal">${cartTotal.toLocaleString()}</span>
             </p>
             <div className="mt-5 flex flex-col space-y-2">
               <button className="bg-white hover:bg-gray-100 text-black p-3">Checkout</button>

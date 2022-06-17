@@ -22,6 +22,7 @@ const Home = () => {
     <main>
       {!loading ? (
         <section className="container mx-auto my-16 px-4 md:px-0">
+          <div className="py-4"></div>
           <h1 className="font-bold text-3xl pb-6">Browse Items</h1>
           <section className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-8">
             {products.map((product) => (
