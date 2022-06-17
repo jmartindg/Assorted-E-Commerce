@@ -1,3 +1,11 @@
+.add-to-cart-btn {
+  @apply text-white font-bold flex items-center bg-zinc-900 hover:bg-black border-0 px-5 py-3;
+}
+
+.quantity-btn {
+  @apply font-bold flex items-center bg-gray-200 hover:bg-gray-300 px-5 py-3;
+}
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

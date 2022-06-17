@@ -32,10 +32,12 @@ const ProductPage = () => {
             <h2 className="font-bold text-4xl mt-4">{productDetails.title}</h2>
             <p className="py-5 leading-normal">{productDetails.description}</p>
             <span className="text-2xl font-bold">${productDetails.price}</span>
-            <div className="mt-7">
-              <button className="text-white font-bold flex items-center bg-zinc-900 hover:bg-black px-5 py-3">
+            <div className="mt-7 flex items-center space-x-2">
+              <button className="add-to-cart-btn">
                 <BsCartPlus /> <span className="ml-3">Add to Cart</span>
               </button>
+              <button className="quantity-btn">+</button>
+              <button className="quantity-btn">-</button>
             </div>
           </div>
         </div>
