@@ -20,6 +20,7 @@ const ProductPage = () => {
 
   useEffect(() => {
     getProductDetails();
+    window.scrollTo(0, 0);
   }, []);
 
   return (

@@ -7,7 +7,7 @@ const Cart = () => {
   return (
     <section className="mb-20">
       <div className="py-7"></div>
-      <div className="container mx-auto grid grid-cols-12 gap-x-6">
+      <div className="container mx-auto grid md:grid-cols-12 gap-x-6 px-4 md:px-0">
         {!isEmpty ? (
           <div className="col-span-8">
             <header>
@@ -26,20 +26,23 @@ const Cart = () => {
                       Quantity: <span className="text-gray-600">{item.quantity}</span>
                     </p>
                     <div className="flex items-center">
-                      <div className="space-x-2">
+                      <div className="md:space-x-2 flex flex-col md:flex-row w-full md:w-auto items-center">
                         <button
                           onClick={() => updateItemQuantity(item.id, item.quantity - 1)}
-                          className="border-0 text-white mt-3 bg-red-700 hover:bg-red-800 inline-block py-2 px-5"
+                          className="w-full md:w-auto border-0 text-white mt-3 bg-red-700 hover:bg-red-800 inline-block py-2 px-5"
                         >
                           Remove
                         </button>
                         <button
                           onClick={() => updateItemQuantity(item.id, item.quantity + 1)}
-                          className="border-0 text-white mt-3 bg-green-600 hover:bg-green-700 inline-block py-2 px-5"
+                          className="w-full md:w-auto border-0 text-white mt-3 bg-green-600 hover:bg-green-700 inline-block py-2 px-5"
                         >
                           Add
                         </button>
-                        <button onClick={() => removeItem(item.id)}>
+                        <button
+                          onClick={() => removeItem(item.id)}
+                          className="w-full md:w-auto flex justify-center my-2 pt-4 md:pt-3"
+                        >
                           <FiTrash className="ml-2" />
                         </button>
                       </div>
@@ -59,7 +62,7 @@ const Cart = () => {
             </section>
           </div>
         )}
-        <div className="col-span-4">
+        <div className="col-span-8 md:col-span-4">
           <h2 className="text-white uppercase font-semibold bg-zinc-900 mt-8 py-5 px-6">Summary</h2>
           <div className="bg-zinc-900 px-5 text-white pb-5">
             <p className="font-semibold">
