@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
 .add-to-cart-btn {
   @apply text-white font-bold flex items-center bg-zinc-900 hover:bg-black border-0 px-5 py-3;
 }
